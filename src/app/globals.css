@@ -2,7 +2,48 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-section.hero{
+section.hero {
   display: grid;
   grid-template-columns: .4fr .6fr;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  background-color: rgba(201, 188, 188, 0.315);
+  padding: 0.5rem;
+}
+
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="text"]:disabled {
+  background-color: rgba(70, 62, 62, 0.322);
+  cursor: not-allowed;
+}
+
+button {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  color: rgb(90, 83, 83);
+  padding: 0.5rem;
+}
+
+button[type="submit"],
+.submit {
+  border: 0em;
+  background: #f13a01;
+  color: #fff;
+}
+
+button[type="submit"]:disabled,
+.submit:disabled {
+  cursor: not-allowed;
+  background: #f139018f;
 }
