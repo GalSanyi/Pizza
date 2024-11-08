@@ -1,23 +1,16 @@
 'use client';
 import { useState } from "react";
 import Image from 'next/image'
-import { signIn } from 'next-auth/react'; // Змінив імпорт
+import { signIn } from 'next-auth/react';
 const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loginInProgress, setLoginInProgress] = useState(false);
     const handleFormSubmit = async (e) => {
-        await signIn('credentials', { email, password }) // Використовуємо правильний signIn
+        await signIn('`credentials`')
         e.preventDefault();
         setLoginInProgress(true);
-        const response = await fetch(`/api/login`, {
-            method: 'POST',
-            body: JSON.stringify({ email, password }),
-            headers: { 'Content-Type': 'application/json' }
-        });
-        if (response.ok) {
-
-        }
+        await signIn('credentials')
         setLoginInProgress(false);
     }
     return (

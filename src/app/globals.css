@@ -15,14 +15,14 @@ input[type="text"] {
   margin: 0.5rem 0;
   border: 1px solid #ccc;
   border-radius: 1rem;
-  background-color: rgba(201, 188, 188, 0.315);
+  background-color: rgba(199, 175, 175, 0.712);
   padding: 0.5rem;
 }
 
 input[type="email"]:disabled,
 input[type="password"]:disabled,
 input[type="text"]:disabled {
-  background-color: rgba(70, 62, 62, 0.322);
+  background-color: rgba(20, 19, 19, 0.63);
   cursor: not-allowed;
 }
 
